@@ -7,3 +7,19 @@ git clone https://github.com/pawar-mahesh/proprietary_vendor_xiaomi.git -b linea
 git clone https://github.com/pawar-mahesh/android_kernel_xiaomi_sdm660.git -b lineage-17.1 kernel/xiaomi/sdm660 --depth=1
 
 ====
+
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+
+ccache -M 50G
+
+====
+
+source build/envsetup.sh
+
+breakfast tulip
+
+croot
+brunch tulip
+
+===
