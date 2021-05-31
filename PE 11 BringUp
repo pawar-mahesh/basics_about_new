@@ -7,13 +7,15 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 =====================================================================================
 
-git clone https://github.com/pawar-mahesh/android_device_xiaomi_tulip.git -b eleven-plus device/xiaomi/tulip
+git clone https://github.com/pawar-mahesh/device_xiaomi_tulip.git -b eleven device/xiaomi/tulip
 
-git clone https://github.com/pawar-mahesh/android_device_xiaomi_sdm660-common.git -b eleven-plus device/xiaomi/sdm660-common
+git clone https://github.com/pawar-mahesh/device_xiaomi_sdm660-common.git -b eleven device/xiaomi/sdm660-common
 
-git clone https://github.com/pawar-mahesh/proprietary_vendor_xiaomi.git -b eleven-plus vendor/xiaomi --depth=1
+git clone https://github.com/pawar-mahesh/vendor_xiaomi_tulip.git -b eleven vendor/xiaomi/tulip
 
-git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm660.git -b lineage-18.1 kernel/xiaomi/sdm660 --depth=1
+git clone https://github.com/pawar-mahesh/vendor_xiaomi_sdm660-common.git -b eleven vendor/xiaomi/sdm660-common
+
+git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm660.git -b lineage-18.1 kernel/xiaomi/sdm660
 
 =====================================================================================
 
