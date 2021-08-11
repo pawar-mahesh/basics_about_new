@@ -7,13 +7,15 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 =====================================================================================
 
-git clone https://github.com/pawar-mahesh/android_device_xiaomi_tulip.git -b eleven device/xiaomi/tulip
+git clone https://github.com/pawar-mahesh/android_device_xiaomi_alioth.git -b eleven device/xiaomi/alioth
 
-git clone https://github.com/pawar-mahesh/android_device_xiaomi_sdm660-common.git -b eleven device/xiaomi/sdm660-common
+git clone https://github.com/pawar-mahesh/android_device_xiaomi_sm8250-common.git -b eleven device/xiaomi/sm8250-common
 
-git clone https://github.com/pawar-mahesh/vendor_xiaomi.git -b eleven vendor/xiaomi
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-18.1 hardware/xiaomi --depth=1
 
-git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm660.git -b lineage-18.1 kernel/xiaomi/sdm660
+git clone https://github.com/pawar-mahesh/vendor_xiaomi.git -b eleven vendor/xiaomi --depth=1
+
+git clone https://github.com/LineageOS/android_kernel_xiaomi_sm8250.git -b lineage-18.1 kernel/xiaomi/sm8250 --depth=1
 
 =====================================================================================
 
@@ -21,7 +23,7 @@ git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm660.git -b linea
 $ . build/envsetup.sh
 
 # Choose a target
-$ lunch aosp_tulip-userdebug
+$ lunch aosp_alioth-userdebug
 
 # Build the code
 $ mka bacon -j8
